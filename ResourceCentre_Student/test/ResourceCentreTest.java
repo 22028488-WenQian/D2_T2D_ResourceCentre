@@ -146,12 +146,37 @@ public class ResourceCentreTest {
 	public void testDoLoanChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+		
+		// Test Case 1 - Loan an available Item
+		assertNotNull("test if there is valid Chromebook arraylist to loan from", chromebookList);
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
+		assertTrue("Test if an available item is ok to loan?", ok);
+		assertFalse(chromebookList.get(0).getIsAvailable());
+		assertEquals(chromebookList.get(0).getDueDate(),"8-8-2020");
+
+		// Test Case 2 - Loan an unavailable item
+		cc2.setIsAvailable(false);
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertFalse("Test that there is an item not available", chromebookList.get(1).getIsAvailable());
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020" );
+		assertFalse("Test that the loan fails.", ok);	
+
+		// Test Case 3 - Item not found
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CC0012", "8-8-2020" );
+		assertFalse("Test that the loan fails.", ok);
+
+		// Test case 4 - Missing details
+		ResourceCentre.addCamcorder(camcorderList, cc3);
+		assertTrue("Test that there is an item available", camcorderList.get(2).getIsAvailable());
+		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CB0013", "" );
+		assertFalse("Test that the loan fails.", ok);
 	}
 
 	@Test
 	public void testDoReturnCamcorder() {
 		
-		// Test case 1: Return a loaned out item
+		// Test case 1: Return a loaned out items
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		
