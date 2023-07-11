@@ -12,6 +12,7 @@ public class ResourceCentre {
 		chromebookList.add(new Chromebook("CB001", "ASUS Chromebook ", "Win 10"));
 		chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
 
+		
 		int option = 0;
 
 		while (option != 5) {
@@ -291,7 +292,7 @@ public class ResourceCentre {
 		if (isReturned == false) {
 			System.out.println("Invalid asset tag");
 		} else {
-			System.out.println("Camcorder " + tag + " returned");
+			System.out.println("Chromebook " + tag + " returned");
 		}
 		// write your code here
 	}

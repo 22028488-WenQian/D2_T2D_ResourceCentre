@@ -154,6 +154,7 @@ public class ResourceCentreTest {
 		// Test case 1: Return a loaned out item
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
 		ResourceCentre.addCamcorder(camcorderList, cc1);
+		
 		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
 		assertTrue("Test if CC0011 is successfully loaned out.", ok);
 		Boolean isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
@@ -185,12 +186,12 @@ public class ResourceCentreTest {
 		assertTrue("Test that cb001 is now available.",chromebookList.get(0).getIsAvailable());
 
 		// Test case 2: Return an item that is not loaned out
-		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "Cb002");
+		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB002");
 		assertFalse("Test that the return fails.", isReturned);
 				
 		// Test case 3: Return an item that does not exist 
-		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "Cb123");
-		assertFalse("Test the the return of CC0013 fails.", isReturned);	
+		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB123");
+		assertFalse("Test the the return of CB123 fails.", isReturned);	
 	}
 		
 	
