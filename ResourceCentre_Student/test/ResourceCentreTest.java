@@ -176,7 +176,7 @@ public class ResourceCentreTest {
 	@Test
 	public void testDoReturnCamcorder() {
 		
-		// Test case 1: Return a loaned out item
+		// Test case 1: Return a loaned out items
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		
