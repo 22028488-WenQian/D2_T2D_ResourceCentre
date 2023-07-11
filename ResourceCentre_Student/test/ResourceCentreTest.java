@@ -167,9 +167,9 @@ public class ResourceCentreTest {
 		assertFalse("Test that the loan fails.", ok);
 
 		// Test case 4 - Missing details
-		ResourceCentre.addCamcorder(camcorderList, cc3);
-		assertTrue("Test that there is an item available", camcorderList.get(2).getIsAvailable());
-		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CB0013", "" );
+		ResourceCentre.addChromebook(chromebookList, cb3);
+		assertTrue("Test that there is an item available", chromebookList.get(2).getIsAvailable());
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0013", "" );
 		assertFalse("Test that the loan fails.", ok);
 	}
 
