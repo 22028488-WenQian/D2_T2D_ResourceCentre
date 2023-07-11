@@ -190,7 +190,7 @@ public class ResourceCentreTest {
 		assertFalse("Test that the return fails.", isReturned);
 				
 		// Test case 3: Return an item that does not exist 
-		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB123");
+		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB103");
 		assertFalse("Test the the return of CB123 fails.", isReturned);	
 	}
 		
