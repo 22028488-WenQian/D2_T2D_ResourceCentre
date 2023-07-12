@@ -199,24 +199,26 @@ public class ResourceCentreTest {
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		
+
+		// Test case 1: Return a loaned out items
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		ResourceCentre.addChromebook(chromebookList,cb1);
 		
-		Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB001", "8-8-2020" );
+		Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
 		assertTrue("Test if CB001 is successfully loaned out.", ok);
-		Boolean isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB001");
+		Boolean isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
 		
-		assertTrue("Test if the return of CB001 is successful.", isReturned);
+		assertTrue("Test if the return of CB0011 is successful.", isReturned);
 		
-		assertTrue("Test that cb001 is now available.",chromebookList.get(0).getIsAvailable());
+		assertTrue("Test that cb0011 is now available.",chromebookList.get(0).getIsAvailable());
 
 		// Test case 2: Return an item that is not loaned out
-		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB002");
+		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0022");
 		assertFalse("Test that the return fails.", isReturned);
 				
 		// Test case 3: Return an item that does not exist 
-		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB103");
-		assertFalse("Test the the return of CB123 fails.", isReturned);	
+		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0044");
+		assertFalse("Test the the return of CB004 fails.", isReturned);	
 	}
 		
 	
