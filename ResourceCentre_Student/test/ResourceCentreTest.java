@@ -134,7 +134,7 @@ public class ResourceCentreTest {
 
 	@Test
 	public void testRetrieveAllChromebook() {
-		//fail("Not yet implemented");
+		//implemented
 		// write your code here
 		//Test Case 1
 		// Test if Item list is not null and empty
