@@ -69,7 +69,7 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 
-		// Item list is not null and it is empty
+		// Item list is not null and it is empty.
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		assertEquals("Test that the Chromebook arraylist is empty.", 0, chromebookList.size());
 		//Given an empty list, after adding 1 item, the size of the list is 1
