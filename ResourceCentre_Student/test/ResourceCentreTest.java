@@ -67,7 +67,7 @@ public class ResourceCentreTest {
 	@Test
 	public void testAddChromebook() {
 		//fail("Not yet implemented");
-		// write your code here 
+		// write your code here
 	}
 
 	@Test
@@ -214,10 +214,10 @@ public class ResourceCentreTest {
 
 		// Test case 2: Return an item that is not loaned out
 		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0022");
-		assertFalse("Test that the return fails.", isReturned);
+		assertFalse("Test that the return of CB0022fails.", isReturned);
 				
 		// Test case 3: Return an item that does not exist 
-		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0044");
+		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0044"); 
 		assertFalse("Test the the return of CB004 fails.", isReturned);	
 	}
 		
