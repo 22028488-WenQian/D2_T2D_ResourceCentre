@@ -68,8 +68,7 @@ public class ResourceCentreTest {
 	public void testAddChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
-<<<<<<< HEAD
-=======
+
 		// Item list is not null and it is empty
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		assertEquals("Test that the Chromebook arraylist is empty.", 0, chromebookList.size());
@@ -92,7 +91,6 @@ public class ResourceCentreTest {
 		Chromebook cb_missing = new Chromebook("CB0014", "", "Win 11");
 		ResourceCentre.addChromebook(chromebookList, cb_missing);
 		assertEquals("Test that the Chromebook arraylist size is unchange.", 2, chromebookList.size());
->>>>>>> branch 'master' of https://github.com/22028488-WenQian/D2_T2D_ResourceCentre.git
 	}
 
 	@Test
