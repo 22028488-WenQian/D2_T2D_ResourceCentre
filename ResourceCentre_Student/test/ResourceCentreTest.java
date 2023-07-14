@@ -66,7 +66,7 @@ public class ResourceCentreTest {
 
 	@Test
 	public void testAddChromebook() {
-		//fail("Not yet implemented");
+		//implemented
 		// write your code here
 
 		// Item list is not null and it is empty.
@@ -200,7 +200,7 @@ public class ResourceCentreTest {
 
 	@Test
 	public void testDoLoanChromebook() {
-		//fail("Not yet implemented");
+		//implemented
 		// write your code here
 		
 		// Test Case 1 - Loan an available Item
@@ -212,14 +212,14 @@ public class ResourceCentreTest {
 		assertEquals(chromebookList.get(0).getDueDate(),"8-8-2020");
 
 		// Test Case 2 - Loan an unavailable item
-		cc2.setIsAvailable(false);
+		cb2.setIsAvailable(false);
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertFalse("Test that there is an item not available", chromebookList.get(1).getIsAvailable());
 		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020" );
 		assertFalse("Test that the loan fails.", ok);	
 
 		// Test Case 3 - Item not found
-		ok = ResourceCentre.doLoanChromebook(chromebookList, "CC0012", "8-8-2020" );
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0016", "8-8-2020" );
 		assertFalse("Test that the loan fails.", ok);
 
 		// Test case 4 - Missing details
@@ -253,7 +253,7 @@ public class ResourceCentreTest {
 	
 	@Test
 	public void testDoReturnChromebook() {
-		//fail("Not yet implemented");
+		//implemented
 		
 
 		// Test case 1: Return a loaned out items
